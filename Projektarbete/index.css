@@ -1,0 +1,100 @@
+/**********************
+      menu & logo
+***********************/
+
+#logo{
+  grid-area: logo ;
+  opacity: .7;
+  z-index: 2;
+  color: #fff;
+  text-align: left;
+  background-color: black;
+  }
+
+#logo-text{
+  text-decoration: none;
+  color: #fff;
+  font-size:1.3em;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+
+#menu{
+  grid-area: menu;
+  background-color: black;
+  opacity: .7;
+  z-index: 2;
+}
+
+#menu ul{
+  list-style: none;
+    font-size: 40;
+}
+
+/**********************
+        body
+***********************/
+
+body, html{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  display: grid;
+  background-color: black;
+  background-image:url(/Projektarbete/images/Lights.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: 8% auto auto auto 10%;
+  grid-template-areas: 
+    "logo logo  menu  menu  menu"
+    "edu  edu   edu  edu   edu"
+    "exp  exp   exp  exp  exp"
+    "more more  more  more  more"
+    "footer footer  footer  footer  footer";
+}
+
+
+
+#education{
+  grid-area: edu;
+  margin: 0 auto;
+  width: 90%;
+}
+
+#experience{
+  grid-area: exp;
+}
+
+#more{
+  grid-area: more;
+}
+
+footer{
+  grid-area: footer;
+
+}
+
+@media screen and (min-width: 800px){
+  #menu ul{
+    display:flex;
+    float: right;
+    text-decoration: none;
+    margin: 40;
+  }
+
+  #menu ul li a{
+    font-size: 35px;
+    margin: 0 75px;
+    color: #fff;
+    text-decoration: none;
+
+  }
+
+  #menu li{
+  }
+}
